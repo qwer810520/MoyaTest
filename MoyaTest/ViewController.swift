@@ -22,24 +22,14 @@ class ViewController: UIViewController {
       switch result {
         case .success(let response):
           debugPrint(result)
-          let responseData = response.data
-          print("debugDescription: ", response.debugDescription)
-          print("statusCode: \(response.statusCode)")
-          print("result: \(String(data: responseData, encoding: .utf8))")
+          do {
+            let decoder = try JSONDecoder().decode(CampaignInfoModel.self, from: response.data)
+            dump(decoder)
+          } catch {
+            print("decadoble failure, error is \(error.localizedDescription)")
+          }
         case .failure(let error):
           print("request failure, error is \(error)")
-      }
-    }
-
-    DispatchQueue.main.async {
-      let type = APITest.test
-      AF.request(type.baseURL.absoluteString + type.path).responseData { response in
-        switch response.result {
-          case .success(let data):
-            print("AF request success, statusCode is \(response.response?.statusCode ?? 0)")
-          case .failure(let error):
-            print("AF request failure, error is \(error.localizedDescription)")
-        }
       }
     }
   }
@@ -61,7 +51,7 @@ extension APITest: TargetType {
   }
 
   var path: String {
-    return "_functions/hasCampaign?listId=123456"
+    return "_functions/hasCampaign"
 //    return "_functions/hasCampaign.json"
   }
 
@@ -74,13 +64,11 @@ extension APITest: TargetType {
   }
 
   var task: Task {
-    return .requestPlain
+    let data = ["listId": 123456]
+    return .requestParameters(parameters: data, encoding: URLEncoding.queryString)
   }
 
   var headers: [String : String]? {
     return nil
   }
 }
-
-
-

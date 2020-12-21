@@ -15,6 +15,11 @@
 		399ADAFF259053B7005B95BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 399ADAFD259053B7005B95BA /* LaunchScreen.storyboard */; };
 		399ADB0A259053B7005B95BA /* MoyaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399ADB09259053B7005B95BA /* MoyaTestTests.swift */; };
 		399ADB15259053B7005B95BA /* MoyaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399ADB14259053B7005B95BA /* MoyaTestUITests.swift */; };
+		399ADB4C25909B7C005B95BA /* CampaignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399ADB4B25909B7C005B95BA /* CampaignModel.swift */; };
+		399ADB5425909C63005B95BA /* CampaignRequiredModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399ADB5325909C63005B95BA /* CampaignRequiredModel.swift */; };
+		399ADB5925909CD0005B95BA /* CampaignDecorationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399ADB5825909CD0005B95BA /* CampaignDecorationModel.swift */; };
+		399ADB6125909D36005B95BA /* CampaignPromptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399ADB6025909D36005B95BA /* CampaignPromptModel.swift */; };
+		399ADB6A25909E1C005B95BA /* CampaignInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399ADB6925909E1C005B95BA /* CampaignInfoModel.swift */; };
 		6CE8B0BE07047E8173AA5B87 /* Pods_MoyaTest_MoyaTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F201D72A7D4025D68E4B37 /* Pods_MoyaTest_MoyaTestUITests.framework */; };
 		D0A99E0EDCF83FB5CEFEC748 /* Pods_MoyaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54654FD1B4F55FEA361109F1 /* Pods_MoyaTest.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +56,11 @@
 		399ADB10259053B7005B95BA /* MoyaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoyaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		399ADB14259053B7005B95BA /* MoyaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaTestUITests.swift; sourceTree = "<group>"; };
 		399ADB16259053B7005B95BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		399ADB4B25909B7C005B95BA /* CampaignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignModel.swift; sourceTree = "<group>"; };
+		399ADB5325909C63005B95BA /* CampaignRequiredModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignRequiredModel.swift; sourceTree = "<group>"; };
+		399ADB5825909CD0005B95BA /* CampaignDecorationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDecorationModel.swift; sourceTree = "<group>"; };
+		399ADB6025909D36005B95BA /* CampaignPromptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignPromptModel.swift; sourceTree = "<group>"; };
+		399ADB6925909E1C005B95BA /* CampaignInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignInfoModel.swift; sourceTree = "<group>"; };
 		4063146C5196B12EC9676F58 /* Pods-MoyaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaTest.release.xcconfig"; path = "Target Support Files/Pods-MoyaTest/Pods-MoyaTest.release.xcconfig"; sourceTree = "<group>"; };
 		47390BB5F5FB4C9EAB94FE76 /* Pods-MoyaTest-MoyaTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaTest-MoyaTestUITests.release.xcconfig"; path = "Target Support Files/Pods-MoyaTest-MoyaTestUITests/Pods-MoyaTest-MoyaTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		54654FD1B4F55FEA361109F1 /* Pods_MoyaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +134,7 @@
 		399ADAF1259053B4005B95BA /* MoyaTest */ = {
 			isa = PBXGroup;
 			children = (
+				399ADB4A25909B68005B95BA /* Model */,
 				399ADAF2259053B4005B95BA /* AppDelegate.swift */,
 				399ADAF4259053B4005B95BA /* SceneDelegate.swift */,
 				399ADAF6259053B4005B95BA /* ViewController.swift */,
@@ -150,6 +161,18 @@
 				399ADB16259053B7005B95BA /* Info.plist */,
 			);
 			path = MoyaTestUITests;
+			sourceTree = "<group>";
+		};
+		399ADB4A25909B68005B95BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				399ADB4B25909B7C005B95BA /* CampaignModel.swift */,
+				399ADB5325909C63005B95BA /* CampaignRequiredModel.swift */,
+				399ADB5825909CD0005B95BA /* CampaignDecorationModel.swift */,
+				399ADB6025909D36005B95BA /* CampaignPromptModel.swift */,
+				399ADB6925909E1C005B95BA /* CampaignInfoModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3B7362041C487D40196B59F1 /* Pods */ = {
@@ -402,9 +425,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				399ADB6125909D36005B95BA /* CampaignPromptModel.swift in Sources */,
 				399ADAF7259053B4005B95BA /* ViewController.swift in Sources */,
 				399ADAF3259053B4005B95BA /* AppDelegate.swift in Sources */,
 				399ADAF5259053B4005B95BA /* SceneDelegate.swift in Sources */,
+				399ADB5925909CD0005B95BA /* CampaignDecorationModel.swift in Sources */,
+				399ADB4C25909B7C005B95BA /* CampaignModel.swift in Sources */,
+				399ADB5425909C63005B95BA /* CampaignRequiredModel.swift in Sources */,
+				399ADB6A25909E1C005B95BA /* CampaignInfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
